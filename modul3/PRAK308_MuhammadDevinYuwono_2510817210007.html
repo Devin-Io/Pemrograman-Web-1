@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Kursus</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: "Times New Roman", serif;
+        }
+
+        .container {
+            width: 720px;
+            height: 790px;
+            margin: 0 auto;
+            border: 4px double black;
+        }
+
+        .header {
+            background-color: skyblue;
+            height: 110px;
+            border-bottom: 3px double white;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding-top: 25px;
+            color: red;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .data {
+            background-color: gray;
+            height: 470px;
+            padding-left: 5px;
+            padding-top: 5px;
+            border-bottom: 3px double white;
+        }
+
+        .data h2 {
+            margin: 0 0 25px 0;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            font-size: 18px;
+            padding-bottom: 7px;
+            vertical-align: top;
+        }
+
+        .label {
+            width: 200px;
+        }
+
+     input[type="text"],
+input[type="date"] {
+    width: 190px;
+    height: 22px;
+    font-size: 16px;
+}
+
+        .tanggal {
+            width: 170px !important;
+        }
+
+       .pilihan {
+    font-size: 18px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: dodgerblue;
+}
+        select {
+            width: 235px;
+            height: 25px;
+            font-size: 16px;
+        }
+
+        .komentar {
+            background-color: salmon;
+            height: 195px;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+
+        .komentar label {
+            font-size: 18px;
+        }
+
+        textarea {
+            width: 540px;
+            height: 90px;
+            font-size: 16px;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="reset"],
+        input[type="submit"],
+        input[type="button"] {
+            font-size: 16px;
+            padding: 3px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Pendaftaran Kursus</h1>
+        </div>
+
+        <div class="data">
+            <h2>Data Diri</h2>
+
+            <form>
+                <table>
+                    <tr>
+                        <td class="label">Nama</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Nim</td>
+                        <td><input type="text" name="nim"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">E-mail</td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Tanggal Lahir</td>
+                        <td><input type="date" class="tanggal" name="tanggal">
+                    </tr>
+
+                    <tr>
+                        <td class="label">Jenis Kelamin</td>
+                        <td class="pilihan">
+                            <input type="radio" name="jk" value="Laki-laki"> Laki-laki<br>
+                            <input type="radio" name="jk" value="Perempuan"> Perempuan
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Pilih Program Kursus</td>
+                        <td class="pilihan">
+                            <input type="checkbox" name="kursus" value="C#"> C#<br>
+                            <input type="checkbox" name="kursus" value="Java"> Java<br>
+                            <input type="checkbox" name="kursus" value="SQL"> SQL<br>
+                            <input type="checkbox" name="kursus" value="HTML dan PHP"> HTML dan PHP
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Pilihan Hari/Jam Kursus</td>
+                        <td>
+                            <select name="jadwal">
+                                <option>Senin - Rabu/09.00 - 11.00</option>
+                                <option>Selasa - Kamis/10.00 - 12.00</option>
+                                <option>Jumat - Sabtu/13.00 - 15.00</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+
+        <div class="komentar">
+            <label>Komentar Anda</label>
+            <textarea name="komentar"></textarea>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+            <input type="button" value="Cancel">
+        </div>
+
+            </form>
+
+    </div>
+
+</body>
+</html>
